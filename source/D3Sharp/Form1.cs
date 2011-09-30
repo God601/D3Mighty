@@ -38,11 +38,21 @@ namespace D3Sharp
         //progressBar1.Maximum = 100;
         //progressBar1.Value = 0;
             //RichTextBox Console
-        richTextBox1.Text += "Copyright (C) 2009-2011 The AllMightyOne's Project - By Karl Fortier-Champagne \n\f";
+        richTextBox1.Text += "Copyright (C) 2009-2011 The AllMightyOne's Project\n\f";
         richTextBox1.Text += "[D3GS] D3Sharp Revision 4 is loading... \n";
         StartupServers();
+        StartupCommand();
         richTextBox1.Text += "[D3GS] D3Sharp Loaded Successfuly! \n\f";
         //progressBar1.Value = 100;
+
+     }
+
+        public void StartupCommand()
+        {
+            if (richTextBox1.Text == "[CONSOLE] stop")
+            {
+                this.Close();
+            }
         }
 
         public static void StartupServers()
@@ -107,6 +117,7 @@ namespace D3Sharp
 
         public void richTextBox1_TextChanged_1(object sender, EventArgs e)
         {
+            if (richTextBox1.Text == "[CONSOLE] stop") this.Close();
         }
 
         private void configD3GSToolStripMenuItem_Click(object sender, EventArgs e)
@@ -121,7 +132,6 @@ namespace D3Sharp
 
         private void textBox1_TextChanged_1(object sender, EventArgs e)
         {
-
         }
 
         private void restartD3GSToolStripMenuItem_Click(object sender, EventArgs e)
@@ -147,6 +157,7 @@ namespace D3Sharp
         private void button1_Click(object sender, EventArgs e)
         {
             richTextBox1.Text += "[CONSOLE] " + textBox1.Text + "\n";
+            textBox1.Text = "";
         }
     }
 }
