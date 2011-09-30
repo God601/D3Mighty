@@ -50,8 +50,17 @@ namespace D3Sharp
         public void doSomething()
         {
             i++;
-            axWindowsMediaPlayer1.URL = @"C:\Users\TheExecutioner\D3Mighty\source\D3Sharp\bin\Release\Assets\mediafile.mp3";
+            axWindowsMediaPlayer1.URL = Config.Instance.Music;
             return;
+        }
+
+        public sealed class Config : Core.Config.Config
+        {
+            public string Music { get { return this.GetString("Music", @"C:\Users\TheExecutioner\D3Mighty\source\D3Sharp\bin\Release\Assets\mediafile.mp3"); } set { this.Set("Music", value); } }
+
+            private static readonly Config _instance = new Config();
+            public static Config Instance { get { return _instance; } }
+            private Config() : base("Bnet-Server") { }
         }
 
         public void StartupCommand()
