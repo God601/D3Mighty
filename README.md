@@ -1,12 +1,6 @@
 # Stay awhile and listen
 
-* Read the [FAQ](/mooege/mooege/wiki/FAQ) before asking!
-* Status: Will get you to town - though ingame is somewhat hardcoded atm... Ask in #d3sharp.chat for more info.
-* IRC: [#mooege.chat/synirc](http://chat.mibbit.com/?server=irc.synIRC.net&channel=%23mooege.chat)
-* IRC (Developers Only): [#mooege/synirc](http://chat.mibbit.com/?server=irc.synIRC.net&channel=%23mooege)
-* Annoucements: [#mooege.announce/synirc](http://chat.mibbit.com/?server=irc.synIRC.net&channel=%23mooege.announce)
-
-Copyright (C) 2011 D3Sharp Project
+Copyright (C) 2009-2011 The AllMightyOne's Project
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License
