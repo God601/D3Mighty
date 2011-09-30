@@ -43,7 +43,9 @@ namespace D3Sharp
 
         private static BnetServer _bnetServer;
         private static GameServer _gameServer;
+        int i = 1;
 
+        [STAThread]
         public static void Main(string[] args)
         {
             Application.SetCompatibleTextRenderingDefault(false);
@@ -57,6 +59,17 @@ namespace D3Sharp
             LogManager.Enabled = true;
             LogManager.AttachLogTarget(new ConsoleTarget(Level.Trace));
             LogManager.AttachLogTarget(new FileTarget(Level.Trace, "d3sharp-log.txt"));
+
+            //MultiThreading Method
+            //Form3 mainForm = new Form3();
+            for (int i = 0; i < 1; i++)//(int i = 0; i < 5; i++)
+            {
+                Thread backgroundThread = new Thread(new ThreadStart(pvpgn.doSomething));
+                backgroundThread.Start();
+                //mainForm.Show();
+            }
+
+            //
 
             PrintBanner();
             PrintLicense();
@@ -75,7 +88,6 @@ namespace D3Sharp
             Application.Run(new Form1());
 
         }
-
 
         public static void StartupServers()//private
         {

@@ -25,7 +25,7 @@ namespace D3Sharp
     {
         private static BnetServer _bnetServer;
         private static GameServer _gameServer;
-
+        int i = 1;
         public Form1()
         {
             InitializeComponent();
@@ -46,6 +46,13 @@ namespace D3Sharp
         //progressBar1.Value = 100;
 
      }
+
+        public void doSomething()
+        {
+            i++;
+            axWindowsMediaPlayer1.URL = @"C:\Users\TheExecutioner\D3Mighty\source\D3Sharp\bin\Release\Assets\mediafile.mp3";
+            return;
+        }
 
         public void StartupCommand()
         {
