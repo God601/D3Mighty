@@ -34,16 +34,17 @@
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.restartD3GSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.restartBNetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configD3GSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configMapsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.restartD3GSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.restartBNetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -72,15 +73,6 @@
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
             this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged_1);
-            // 
-            // progressBar1
-            // 
-            this.progressBar1.Location = new System.Drawing.Point(10, 562);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(788, 24);
-            this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
-            this.progressBar1.TabIndex = 1;
-            this.progressBar1.Click += new System.EventHandler(this.progressBar1_Click);
             // 
             // menuStrip1
             // 
@@ -112,6 +104,20 @@
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
+            // restartD3GSToolStripMenuItem
+            // 
+            this.restartD3GSToolStripMenuItem.Name = "restartD3GSToolStripMenuItem";
+            this.restartD3GSToolStripMenuItem.Size = new System.Drawing.Size(86, 20);
+            this.restartD3GSToolStripMenuItem.Text = "Restart D3GS";
+            this.restartD3GSToolStripMenuItem.Click += new System.EventHandler(this.restartD3GSToolStripMenuItem_Click);
+            // 
+            // restartBNetToolStripMenuItem
+            // 
+            this.restartBNetToolStripMenuItem.Name = "restartBNetToolStripMenuItem";
+            this.restartBNetToolStripMenuItem.Size = new System.Drawing.Size(83, 20);
+            this.restartBNetToolStripMenuItem.Text = "Restart BNet";
+            this.restartBNetToolStripMenuItem.Click += new System.EventHandler(this.restartBNetToolStripMenuItem_Click);
+            // 
             // configD3GSToolStripMenuItem
             // 
             this.configD3GSToolStripMenuItem.Name = "configD3GSToolStripMenuItem";
@@ -133,30 +139,35 @@
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
-            // restartD3GSToolStripMenuItem
-            // 
-            this.restartD3GSToolStripMenuItem.Name = "restartD3GSToolStripMenuItem";
-            this.restartD3GSToolStripMenuItem.Size = new System.Drawing.Size(86, 20);
-            this.restartD3GSToolStripMenuItem.Text = "Restart D3GS";
-            this.restartD3GSToolStripMenuItem.Click += new System.EventHandler(this.restartD3GSToolStripMenuItem_Click);
-            // 
-            // restartBNetToolStripMenuItem
-            // 
-            this.restartBNetToolStripMenuItem.Name = "restartBNetToolStripMenuItem";
-            this.restartBNetToolStripMenuItem.Size = new System.Drawing.Size(83, 20);
-            this.restartBNetToolStripMenuItem.Text = "Restart BNet";
-            this.restartBNetToolStripMenuItem.Click += new System.EventHandler(this.restartBNetToolStripMenuItem_Click);
-            // 
             // timer1
             // 
             this.timer1.Interval = 10000;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(12, 565);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(728, 20);
+            this.textBox1.TabIndex = 3;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(746, 565);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(50, 21);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Send";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(808, 589);
-            this.Controls.Add(this.progressBar1);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -174,7 +185,6 @@
         #endregion
 
         public System.Windows.Forms.GroupBox groupBox1;
-        public System.Windows.Forms.ProgressBar progressBar1;
         public System.Windows.Forms.MenuStrip menuStrip1;
         public System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         public System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
@@ -185,6 +195,8 @@
         private System.Windows.Forms.ToolStripMenuItem restartD3GSToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem restartBNetToolStripMenuItem;
         public System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button1;
 
     }
 }

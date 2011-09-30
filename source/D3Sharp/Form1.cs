@@ -34,15 +34,15 @@ namespace D3Sharp
         public void Form1_Load(object sender, EventArgs e)//private
         {
             //Progress Bar
-        progressBar1.Minimum = 0;
-        progressBar1.Maximum = 100;
-        progressBar1.Value = 0;
+        //progressBar1.Minimum = 0;
+        //progressBar1.Maximum = 100;
+        //progressBar1.Value = 0;
             //RichTextBox Console
         richTextBox1.Text += "Copyright (C) 2009-2011 The AllMightyOne's Project - By Karl Fortier-Champagne \n\f";
         richTextBox1.Text += "[D3GS] D3Sharp Revision 4 is loading... \n";
         StartupServers();
         richTextBox1.Text += "[D3GS] D3Sharp Loaded Successfuly! \n\f";
-        progressBar1.Value = 100;
+        //progressBar1.Value = 100;
         }
 
         public static void StartupServers()
@@ -54,12 +54,12 @@ namespace D3Sharp
             var bnetServerThread = new Thread(_bnetServer.Run) { IsBackground = true };
             bnetServerThread.Start();
             pvpgn.richTextBox1.Text += "[D3GS] Bnet Server Loaded Successfuly! \n\f";
-            pvpgn.progressBar1.Value = 25;
+            //pvpgn.progressBar1.Value = 25;
 
             var gameServerThread = new Thread(_gameServer.Run) { IsBackground = true };
             gameServerThread.Start();
             pvpgn.richTextBox1.Text += "[D3GS] Game Server Loaded Successfuly! \n\f";
-            pvpgn.progressBar1.Value = 50;
+            //pvpgn.progressBar1.Value = 50;
         }
 
         public static void StartupD3GS()
@@ -70,7 +70,7 @@ namespace D3Sharp
             var gameServerThread = new Thread(_gameServer.Run) { IsBackground = true };
             gameServerThread.Start();
             pvpgn.richTextBox1.Text += "[D3GS] Game Server Loaded Successfuly! \n\f";
-            pvpgn.progressBar1.Value = 50;
+            //pvpgn.progressBar1.Value = 50;
         }
 
         public static void StartupBNet()
@@ -81,7 +81,7 @@ namespace D3Sharp
             var bnetServerThread = new Thread(_bnetServer.Run) { IsBackground = true };
             bnetServerThread.Start();
             pvpgn.richTextBox1.Text += "[D3GS] Bnet Server Loaded Successfuly! \n\f";
-            pvpgn.progressBar1.Value = 50;
+            //pvpgn.progressBar1.Value = 50;
 
         }
 
@@ -140,6 +140,13 @@ namespace D3Sharp
             richTextBox1.Text += "[D3GS] BNet Restarted Successfuly \n\f";
         }
 
-        //Form2.Show();
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Text += "[CONSOLE] " + textBox1.Text + "\n";
+        }
     }
 }
