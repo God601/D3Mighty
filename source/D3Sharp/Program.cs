@@ -62,12 +62,14 @@ namespace D3Sharp
 
             //MultiThreading Method
             //Form3 mainForm = new Form3();
+            /*
             for (int i = 0; i < 1; i++)//(int i = 0; i < 5; i++)
             {
-                Thread backgroundThread = new Thread(new ThreadStart(pvpgn.doSomething));
+                Thread backgroundThread = new Thread(new ThreadStart(pvpgn.playMusicToolStripMenuItem_Click));
                 backgroundThread.Start();
                 //mainForm.Show();
             }
+             * */
 
             //
 

@@ -47,20 +47,13 @@ namespace D3Sharp
 
      }
 
-        public void doSomething()
-        {
-            i++;
-            axWindowsMediaPlayer1.URL = Config.Instance.Music;
-            return;
-        }
-
         public sealed class Config : Core.Config.Config
         {
             public string Music { get { return this.GetString("Music", @"C:\Users\TheExecutioner\D3Mighty\source\D3Sharp\bin\Release\Assets\mediafile.mp3"); } set { this.Set("Music", value); } }
 
             private static readonly Config _instance = new Config();
             public static Config Instance { get { return _instance; } }
-            private Config() : base("Bnet-Server") { }
+            private Config() : base("Core") { }
         }
 
         public void StartupCommand()
@@ -174,6 +167,20 @@ namespace D3Sharp
         {
             richTextBox1.Text += "[CONSOLE] " + textBox1.Text + "\n";
             textBox1.Text = "";
+        }
+
+        private void plauMusicToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            i++;
+            axWindowsMediaPlayer1.URL = Config.Instance.Music;
+            return;
+        }
+
+        private void stopMusicToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            i++;
+            axWindowsMediaPlayer1.Ctlcontrols.stop();
+            return;
         }
     }
 }

@@ -42,6 +42,9 @@
             this.restartBNetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configD3GSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configMapsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.playMusicToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.plauMusicToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.stopMusicToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -79,12 +82,14 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.Highlight;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.restartD3GSToolStripMenuItem,
             this.restartBNetToolStripMenuItem,
             this.configD3GSToolStripMenuItem,
             this.configMapsToolStripMenuItem,
+            this.playMusicToolStripMenuItem,
             this.aboutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -134,6 +139,29 @@
             this.configMapsToolStripMenuItem.Size = new System.Drawing.Size(85, 20);
             this.configMapsToolStripMenuItem.Text = "Config Maps";
             this.configMapsToolStripMenuItem.Click += new System.EventHandler(this.configMapsToolStripMenuItem_Click);
+            // 
+            // playMusicToolStripMenuItem
+            // 
+            this.playMusicToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.plauMusicToolStripMenuItem,
+            this.stopMusicToolStripMenuItem});
+            this.playMusicToolStripMenuItem.Name = "playMusicToolStripMenuItem";
+            this.playMusicToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
+            this.playMusicToolStripMenuItem.Text = "Music";
+            // 
+            // plauMusicToolStripMenuItem
+            // 
+            this.plauMusicToolStripMenuItem.Name = "plauMusicToolStripMenuItem";
+            this.plauMusicToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.plauMusicToolStripMenuItem.Text = "Play Music";
+            this.plauMusicToolStripMenuItem.Click += new System.EventHandler(this.plauMusicToolStripMenuItem_Click);
+            // 
+            // stopMusicToolStripMenuItem
+            // 
+            this.stopMusicToolStripMenuItem.Name = "stopMusicToolStripMenuItem";
+            this.stopMusicToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.stopMusicToolStripMenuItem.Text = "Stop Music";
+            this.stopMusicToolStripMenuItem.Click += new System.EventHandler(this.stopMusicToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem
             // 
@@ -211,7 +239,10 @@
         public System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
-        private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
+        public AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
+        public System.Windows.Forms.ToolStripMenuItem playMusicToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem plauMusicToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem stopMusicToolStripMenuItem;
 
     }
 }
