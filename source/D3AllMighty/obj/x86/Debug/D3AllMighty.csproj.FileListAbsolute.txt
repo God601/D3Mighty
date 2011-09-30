@@ -1,0 +1,9 @@
+C:\Users\TheExecutioner\Desktop\D3GS\mooege-mooege-549e491\source\D3AllMighty\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\TheExecutioner\Desktop\D3GS\mooege-mooege-549e491\source\D3AllMighty\obj\x86\Debug\D3Sharp.Form1.resources
+C:\Users\TheExecutioner\Desktop\D3GS\mooege-mooege-549e491\source\D3AllMighty\obj\x86\Debug\D3AllMighty.Properties.Resources.resources
+C:\Users\TheExecutioner\Desktop\D3GS\mooege-mooege-549e491\source\D3AllMighty\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\TheExecutioner\Desktop\D3GS\mooege-mooege-549e491\source\D3AllMighty\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\TheExecutioner\Desktop\D3GS\mooege-mooege-549e491\source\D3AllMighty\bin\Debug\D3AllMighty.exe
+C:\Users\TheExecutioner\Desktop\D3GS\mooege-mooege-549e491\source\D3AllMighty\bin\Debug\D3AllMighty.pdb
+C:\Users\TheExecutioner\Desktop\D3GS\mooege-mooege-549e491\source\D3AllMighty\obj\x86\Debug\D3AllMighty.exe
+C:\Users\TheExecutioner\Desktop\D3GS\mooege-mooege-549e491\source\D3AllMighty\obj\x86\Debug\D3AllMighty.pdb

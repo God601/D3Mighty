@@ -1,0 +1,4 @@
+bin/
+obj/
+ProtoStringFixer.pidb
+/*.csproj.ReSharper
