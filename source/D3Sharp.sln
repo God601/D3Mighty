@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D3Proto", "D3Proto\D3Proto.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gibbed.Helpers", "Gibbed.Helpers\Gibbed.Helpers.csproj", "{5162A9FB-4DE1-4BBF-B7A2-5E8116AB0D26}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D3Mighty", "D3Mighty\D3Mighty.csproj", "{C904E920-2CEC-4273-9E58-3111B97B60A4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +51,16 @@ Global
 		{5162A9FB-4DE1-4BBF-B7A2-5E8116AB0D26}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{5162A9FB-4DE1-4BBF-B7A2-5E8116AB0D26}.Release|x86.ActiveCfg = Release|Any CPU
 		{5162A9FB-4DE1-4BBF-B7A2-5E8116AB0D26}.Release|x86.Build.0 = Release|Any CPU
+		{C904E920-2CEC-4273-9E58-3111B97B60A4}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{C904E920-2CEC-4273-9E58-3111B97B60A4}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{C904E920-2CEC-4273-9E58-3111B97B60A4}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{C904E920-2CEC-4273-9E58-3111B97B60A4}.Debug|x86.ActiveCfg = Debug|x86
+		{C904E920-2CEC-4273-9E58-3111B97B60A4}.Debug|x86.Build.0 = Debug|x86
+		{C904E920-2CEC-4273-9E58-3111B97B60A4}.Release|Any CPU.ActiveCfg = Release|x86
+		{C904E920-2CEC-4273-9E58-3111B97B60A4}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{C904E920-2CEC-4273-9E58-3111B97B60A4}.Release|Mixed Platforms.Build.0 = Release|x86
+		{C904E920-2CEC-4273-9E58-3111B97B60A4}.Release|x86.ActiveCfg = Release|x86
+		{C904E920-2CEC-4273-9E58-3111B97B60A4}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

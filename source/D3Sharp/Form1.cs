@@ -64,6 +64,16 @@ namespace D3Sharp
             }
         }
 
+        public void PlayerDisconnect()
+        {
+            richTextBox1.Text += "[D3GS] A Player disconnected. \n\f";
+        }
+
+        public void PlayerConnect()
+        {
+            richTextBox1.Text += "[D3GS] A Player connected. \n\f";
+        }
+
         public static void StartupServers()
         {
             Form1 pvpgn = new Form1();
@@ -100,6 +110,9 @@ namespace D3Sharp
             var bnetServerThread = new Thread(_bnetServer.Run) { IsBackground = true };
             bnetServerThread.Start();
             pvpgn.richTextBox1.Text += "[D3GS] Bnet Server Loaded Successfuly! \n\f";
+
+            D3Mighty.FormMusic _eDAE = new D3Mighty.FormMusic();
+            _eDAE.BNetLoaded();
             //pvpgn.progressBar1.Value = 50;
 
         }
@@ -169,18 +182,10 @@ namespace D3Sharp
             textBox1.Text = "";
         }
 
-        private void plauMusicToolStripMenuItem_Click(object sender, EventArgs e)
+        private void loadMusicToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            i++;
-            axWindowsMediaPlayer1.URL = Config.Instance.Music;
-            return;
-        }
-
-        private void stopMusicToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            i++;
-            axWindowsMediaPlayer1.Ctlcontrols.stop();
-            return;
+            D3Mighty.FormMusic _eDAO = new D3Mighty.FormMusic();
+            _eDAO.MediaLoad();
         }
     }
 }
